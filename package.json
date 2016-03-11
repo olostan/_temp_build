@@ -1,0 +1,35 @@
+{
+  "name": "cpm-ui-b",
+  "version": "0.0.1",
+  "description": "CPM UI Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jspm": "jspm",
+    "gulp": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "jspm": {
+    "dependencies": {
+      "less": "github:instagis/systemjs-less-plugin@^1.4.1",
+      "ui/ui-framework": "addison:ui/ui-framework@dev"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jspm-build": "0.0.14",
+    "gulp-rename": "^1.2.2",
+    "jspm": "^0.16.31",
+    "jspm-git": "^0.4.4"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp-server-livereload": "^1.7.1",
+    "less": "^2.6.1",
+    "run-sequence": "^1.1.5"
+  }
+}
