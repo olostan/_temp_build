@@ -14,8 +14,8 @@ gulp.task('build:bundle', function(){
             { src: 'src/index', dst: 'app.js' }
         ],
         bundleOptions: {
-            minify: false,
-            mangle: false
+            minify: true,
+            mangle: true
         },
         config:'config.js',
         bundleSfx: true

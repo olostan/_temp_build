@@ -1,7 +1,7 @@
 
 import "./test.less!";
 import {Dep} from './dep';
-
+import UIF from "ui/ui-framework";
 
 interface IA { 
    do();
@@ -15,6 +15,6 @@ class A implements IA {
    }
 }
 
-console.log("index");
+console.log("index, UIF=",UIF);
 let a:IA = new A();
 a.do();
