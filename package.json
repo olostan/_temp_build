@@ -16,7 +16,7 @@
       "less": "github:HuasoFoundries/systemjs-less-plugin@^1.4.1"
     },
     "devDependencies": {
-      "typescript": "npm:typescript@^1.6.2"
+      "typescript": "npm:typescript@^1.8.7"
     },
     "overrides": {
       "npm:@angular/router@0.2.0": {
@@ -33,6 +33,7 @@
     "gulp": "^3.9.1",
     "gulp-jspm-build": "0.0.14",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "jspm": "^0.16.31",
     "jspm-git": "^0.4.4"
   },

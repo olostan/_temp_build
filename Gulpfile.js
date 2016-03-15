@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var rename = require('gulp-rename');
+var replace = require('gulp-replace');
 
 gulp.task('build:clean', function() {
     var del = require('del');
@@ -15,7 +16,7 @@ gulp.task('build:bundle', function(){
         ],
         bundleOptions: {
             minify: true,
-            mangle: true
+            mangle: false
         },
         config:'config.js',
         bundleSfx: true
@@ -24,8 +25,10 @@ gulp.task('build:bundle', function(){
 });
 
 gulp.task('build:copy-index', function() {
-    return gulp.src('index-bundle.html')
-        .pipe(rename("index.html"))
+    return gulp.src('index.html')
+        .pipe(replace(/\s*<script dev-only[\s\S]*?script>[\n\r]*/g,''))
+        .pipe(replace(/<\/body>/g,'<script src="app.js"></script></body>'))
+        //.pipe(rename("index.html"))
         .pipe(gulp.dest('build/'));
 });
 
